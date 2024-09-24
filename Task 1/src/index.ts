@@ -1,5 +1,5 @@
-// Identify if a Number is Even or Odd without function
 
+//1
 let num : number = 5;
 
 if (num % 2 === 0) {
@@ -10,8 +10,7 @@ if (num % 2 === 0) {
 }
 
 
-//Filter Expensive Products from an Array 
-
+//2
 let products = [
     {name: "iPhone", price: 999},
     {name: "MacBook", price: 1299},
@@ -24,8 +23,7 @@ let expensiveProducts = products.filter(product => product.price > 1000);
 
 console.log(expensiveProducts);
 
-////Find the Oldest Admin
-
+//3
 let users = [
     {name: "John", age: 25, isAdmin: true},
     {name: "Jane", age: 30, isAdmin: false},
@@ -33,7 +31,10 @@ let users = [
     {name: "Alice", age: 40, isAdmin: false},
 ];
 
-let oldestAdmin = users.sort((a, b) => a.age - b.age)[0];
+let adminUsers = users.filter(user => user.isAdmin);
 
-console.log(oldestAdmin.name);
+let oldestAdmin = adminUsers.sort((a, b) => b.age - a.age)[0];
+
+console.log(oldestAdmin.name);  
+
 

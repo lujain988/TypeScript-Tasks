@@ -21,5 +21,6 @@ let users = [
     { name: "Bob", age: 35, isAdmin: true },
     { name: "Alice", age: 40, isAdmin: false },
 ];
-let oldestAdmin = users.sort((a, b) => a.age - b.age)[0];
+let adminUsers = users.filter(user => user.isAdmin);
+let oldestAdmin = adminUsers.sort((a, b) => b.age - a.age)[0];
 console.log(oldestAdmin.name);
