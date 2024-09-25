@@ -62,10 +62,10 @@ ProductPrice(product2);
 //4
 interface Device {
   name: string;
-  start(): void;
+  start?(): void;
 }
 function Start(device: Device) {
-  if (device.start() == null) {
+  if (device.start === undefined) {
     console.log("Device starting with default settings");
   } else {
     console.log("Device is started");
@@ -73,14 +73,12 @@ function Start(device: Device) {
 }
 const device1: Device = {
   name: "TV",
-  start: () => {
-    console.log("TV starting with default settings");
-  },
+ 
 };
 const device2: Device = {
   name: "Printer",
-  start: () => {
-    console.log("Printer starting with default settings");
+  start : () => {
+    console.log("Printer started");
   },
 };
 Start(device1);

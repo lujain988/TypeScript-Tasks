@@ -17,7 +17,10 @@ function TeacherAge(teacher) {
         console.log(teacher.subject[i]);
     }
 }
-const teacher1 = { name: "Alice", subject: ["Math", "English", "Science"] };
+const teacher1 = {
+    name: "Alice",
+    subject: ["Math", "English", "Science"],
+};
 const teacher2 = { name: "Bob", subject: ["Math", "English"] };
 TeacherAge(teacher1);
 TeacherAge(teacher2);
@@ -36,14 +39,21 @@ let product2 = { name: "Mobile", price: 500, quantity: 10 };
 ProductPrice(product1);
 ProductPrice(product2);
 function Start(device) {
-    if (device.start() == null) {
+    if (device.start === undefined) {
         console.log("Device starting with default settings");
     }
     else {
         console.log("Device is started");
     }
 }
-const device1 = { name: "TV", start: () => { console.log("TV starting with default settings"); } };
-const device2 = { name: "Printer", start: () => { console.log("Printer starting with default settings"); } };
+const device1 = {
+    name: "TV",
+};
+const device2 = {
+    name: "Printer",
+    start: () => {
+        console.log("Printer started");
+    },
+};
 Start(device1);
 Start(device2);
